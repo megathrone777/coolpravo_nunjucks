@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blank</title>
-    <link rel="stylesheet" href="./css/init.css">
+    <title>{{pageTitle}}</title>
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="/css/init.css" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
@@ -15,9 +15,9 @@
         {% endblock %}
 
         {% include "footer.njk" %}
-    </div>   
+    </div>
 
-    <script src="./js/vendor.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="/js/vendor.js"></script>
+    <script src="/js/main.js" type="module"></script>
 </body>
 </html>

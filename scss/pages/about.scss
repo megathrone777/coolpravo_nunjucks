@@ -1,0 +1,38 @@
+.about-start {
+  padding-block: 40px;
+
+  &__layout {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    height: 534px;
+    position: relative;
+    width: 640px;
+
+    & > div {
+      border-radius: 100px;
+      position: absolute;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        z-index: 1;
+      }
+
+      &:nth-child(4) {
+        border-radius: 200px 120px 160px 160px;
+      }
+
+      &:nth-child(3),
+      &:nth-child(6),
+      &:nth-child(9) {
+        z-index: 2;
+      }
+
+      &:nth-child(11) {
+        z-index: 3;
+      }
+    }
+  }
+}

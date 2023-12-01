@@ -3,8 +3,8 @@
 }
 
 body {
-  font: 14px "Arial", sans-serif;
-  color: black;
+  font: 400 14px "Gilroy";
+  color: $colorText;
   line-height: 1;
 }
 
@@ -14,4 +14,11 @@ img {
 
 a:hover {
   text-decoration: none;
+}
+
+.container {
+  height: 100%;
+  margin-inline: auto;
+  max-width: 1450px;
+  padding-inline: 15px;
 }

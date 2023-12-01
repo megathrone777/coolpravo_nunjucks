@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "downlevelIteration": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "strictNullChecks": true
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext"
   },
-  "files": ["ts/main.ts"],
   "exclude": ["node_modules"],
+  "include": ["ts/*.ts"],
   "ts-node": {
     "compilerOptions": {
-      "module": "NodeNext"
+      "module": "CommonJS"
     }
   }
 }

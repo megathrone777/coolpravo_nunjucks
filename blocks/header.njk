@@ -1,3 +1,42 @@
+{% set items = [
+    {
+        text: "О нас",
+        url: "/"
+    }, {
+        text: "Контакты",
+        url: "/contacts.html"
+    }, {
+        text: "Банкротство",
+        url: "/bankruptcy.html"
+    }, {
+        text: "Практика",
+        url: "/cases.html"
+    }, {
+        text: "Отзывы",
+        url: "/reviews.html"
+    }
+] %}
+
 <header class="header">
-headerdewe11
+    <div class="container">
+        <div class="header__layout">
+            <div class="header__logo">
+                <a class="header__logo__link" href="/">
+                    <img alt="Logo" src="/images/logo_img.png">
+                </a>
+            </div>
+
+            <div class="header__menu">
+                <ul class="header__menu__list">
+                    {% for item in items %}
+                        <li class="header__menu__item">
+                            <a class="header__menu__link" href={{item.url}}>{{item.text}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <button class="button button--medium button--primary" type="button">Записаться</button>
+            </div>
+        </div>
+    </div>
 </header>

@@ -63,9 +63,16 @@ const taskTS: TaskFunction = (callback) => {
   callback();
 };
 
+const taskASSETS: TaskFunction = (callback): void => {
+  gulp.src("./fonts/*").pipe(gulp.dest("./build/fonts"));
+  gulp.src("./images/*").pipe(gulp.dest("./build/images"));
+  gulp.src("favicon.ico").pipe(gulp.dest("./build"));
+  callback();
+};
+
 const taskCONCAT: TaskFunction = (callback) => {
   gulp
-    .src("./vendor/*.js")
+    .src(["./vendor/jquery-3.7.1.min.js", "./vendor/spincrement.min.js"])
     .pipe(gulpConcat("vendor.js"))
     .pipe(gulp.dest("./build/js"));
   callback();
@@ -97,6 +104,10 @@ const taskDEFAULT: TaskFunction = (callback) => {
 
   taskTS((): void => {
     console.info("TS task started!");
+  });
+
+  taskASSETS((): void => {
+    console.info("Assets moved!");
   });
 
   taskSERVER((): void => {

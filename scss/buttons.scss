@@ -1,0 +1,33 @@
+.button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  font: {
+    family: inherit;
+    weight: 600;
+  }
+  display: inline-block;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  transition: background-color 0.2s;
+  user-select: none;
+
+  &--primary {
+    background-color: $colorPrimary;
+
+    &:hover {
+      background-color: $colorHover;
+    }
+  }
+
+  &--medium {
+    border-radius: 30px;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    min-width: 187px;
+    padding: 0 5px;
+  }
+}
